@@ -48,6 +48,6 @@ We have accomplished following in this assignment:
 - Q-values convergence- We have checked whether Q-values learnt by the agent have converged or not. Sampled 10 state-action pairs and ploted it with the number of episodes to understand the convergence.
 
 # Solution Files
-- the environment file: ‘TCGame_Env.py’
-- the agent’s learning file: ‘TicTacToe_Agent.ipynb’
-- Q-values of the state-action pairs tracked: Policy.pkl or Policy.zip
+- the environment file: [‘TCGame_Env.py’](https://github.com/BurnwalAmardeep/Tic-Tac-Toe-using-Reinforcement-Learning/blob/master/TCGame_Env1.py)
+- the agent’s learning file: [‘TicTacToe_Agent.ipynb’](https://github.com/BurnwalAmardeep/Tic-Tac-Toe-using-Reinforcement-Learning/blob/master/TicTacToe_Agent.ipynb)
+- Q-values of the state-action pairs tracked: [Policy.pkl or Policy.zip](https://github.com/BurnwalAmardeep/Tic-Tac-Toe-using-Reinforcement-Learning/blob/master/Policy.zip)

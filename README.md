@@ -22,3 +22,27 @@ It is recommended that you play the game [here](https://playtictactoe.org/) for 
 Here we have built an RL agent that learns to play Numerical Tic-Tac-Toe with odd numbers (the agent will always make the first move). We train our agent using Q-Learning. The environment is playing randomly with the agent, i.e. its strategy is to put an even number randomly in an empty cell. If our agent wins the game, it gets 10 points, if the environment wins, the agent loses 10 points. And if the game ends in a draw, it gets 0. Also, we want the agent to win in as few moves as possible, so for each move, it gets a -1 point.
 
 Following is a sample episode for your reference:
+![image not loaded](TicTacToe_Sample.png)
+
+In this episode, the environment wins as it is able to make 15 first (8+6+1).  After the agent places 1 in one of the grids, the environment rewards it (with a negative reward of -1) and makes a next move of placing 8 in one of the remaining cells.
+
+# Goals
+Solution contains two files: ‘TCGame_Env.py’ and ‘TicTacToe_Agent.ipynb’. The first one is the environment file and the second one is the agent file. We use the environment that is created in TCGame_Env.py to write the learning algorithm.
+
+We have accomplished following in this assignment:
+- Created an MDP(Markov Decision Process) for Numerical Tic-Tac-Toe game. The basic framework for this is:
+  1. Initialise the state
+  2. Define the action space for each state. (Be careful in defining actions. The actions are not the same for each state)
+  3. Define the winning states: the sum of three numbers in a row, column or diagonal is 15.
+  4. Define the terminal states (win,tie,loss)
+  5. Build the reward structure as below:
+      - +10 if the agent wins (makes 15 points first)
+      - -10 if the environment wins
+      - 0 if the game ends in a draw (no one is able to make 15 and the board is filled up)
+      - -1 for each move agent takes
+  6. Define a step function which takes in an input of the agent’s action and state; and outputs the next state and reward. (Make sure you incorporate environment’s move in the next state).
+  7.  TCGame_Env.py file contains functions (and the comments) which will provide an intuition of how the MDP would be formulated. Note: Using this framework is not compulsory, Anyone can create, own framework and functions as well.
+- Built an agent that learns the game by Q-Learning. We can choose the hyperparameters (epsilon (decay rate), learning-rate, discount factor) of our choice. For that, we can train the model iteratively to obtain a good combination of hyperparameters.
+  - While updating the Q-values, if the next state is a terminal state, then the Q-values from that state are 0. (No action is possible from that state)
+  - For a 64-bit system with 8GB RAM, it takes ~100 minutes to run 5Mn episodes.
+- Q-values convergence- We have checked whether Q-values learnt by the agent have converged or not. Sampled 10 state-action pairs and ploted it with the number of episodes to understand the convergence.

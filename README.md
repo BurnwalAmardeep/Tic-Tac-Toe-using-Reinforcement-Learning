@@ -46,3 +46,8 @@ We have accomplished following in this assignment:
   - While updating the Q-values, if the next state is a terminal state, then the Q-values from that state are 0. (No action is possible from that state)
   - For a 64-bit system with 8GB RAM, it takes ~100 minutes to run 5Mn episodes.
 - Q-values convergence- We have checked whether Q-values learnt by the agent have converged or not. Sampled 10 state-action pairs and ploted it with the number of episodes to understand the convergence.
+
+# Solution Files
+- the environment file: ‘TCGame_Env.py’
+- the agent’s learning file: ‘TicTacToe_Agent.ipynb’
+- Q-values of the state-action pairs tracked: Policy.pkl or Policy.zip
